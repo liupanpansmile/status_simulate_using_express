@@ -1,0 +1,40 @@
+﻿<!doctype html> 
+<html> 
+<head> 
+<title>ajax.html</title> 
+<meta content="IE=8" http-equiv="X-UA-Compatible"/> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+
+<script src='/javascripts/jquery-1.11.3.min.js' > </script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+   
+    /*此处发起ajax请求图片，已经请求成功，但是数据未在界面上显示，所以在下面function中，配置src属性，让其再次请求服务器*/
+    var URL = 'images/a.jpg';
+    $.ajax({
+        url: URL,
+        cache: true,
+        processData: false,
+    }).always(function () { 
+        $("#img").attr("src", URL).fadeIn();
+    });
+
+    //$.ajax({
+    //    url: 'images/a.jpg',
+    //    processData: false,
+    //}).always(function (b64data) {
+    //    $("#img").attr("src", "data:image/png;base64," + b64data);
+    //});
+})
+</script>
+</head> 
+<body > 
+	<div id="content">
+        <img  id="img"/>
+	</div>
+</body> 
+</html> 
+
+
+

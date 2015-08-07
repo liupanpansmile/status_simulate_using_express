@@ -1,0 +1,2 @@
+F:\vsCode\TestBed\TestBed\obj\Debug\TestBed.njsprojResolveAssemblyReference.cache
+F:\vsCode\TestBed\TestBed\bin\Microsoft.NodejsTools.WebRole.dll
